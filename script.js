@@ -147,6 +147,14 @@ const handleFormSubmit = function (e) {
   }, 600);
 };
 
+//BTN-SUBMIT
+  const sendBtn = document.querySelector("#send-prompt-btn");
+
+  sendBtn.addEventListener("click", () => {
+  promptform.dispatchEvent(new Event("submit")); // triggers handleFormSubmit
+  }
+);
+
 // file input log
 fileInput.addEventListener("change", () => {
   const file = fileInput.files[0];
