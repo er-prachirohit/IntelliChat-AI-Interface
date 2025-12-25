@@ -348,9 +348,8 @@ body.bot-responding .prompt-form #stop-response-btn{
     color: var(--placeholder-color);
 }
 
-
 @media screen and (max-width: 768px) {
-    /* Header adjustments */
+    
     .container .app-header {
         padding: 20px 0 30px;
     }
@@ -361,24 +360,20 @@ body.bot-responding .prompt-form #stop-response-btn{
         font-size: 1.6rem;
     }
 
-
+    
     .container .suggestions {
-        display: flex; 
-        overflow-x: auto;
+        display: grid;
+        grid-template-columns: 1fr;
         gap: 12px;
         margin-top: 20px;
         padding-bottom: 15px;
-        padding-right: 20px; 
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-    }
-    .container .suggestions::-webkit-scrollbar {
-        display: none;
+        overflow-x: visible;
+        overflow-y: visible;
     }
     
     
     .suggestions .suggestions-list {
-        width: 240px; 
+        width: 100%;
         flex-shrink: 0;
         min-height: 140px;
         padding: 15px;
@@ -418,7 +413,6 @@ body.bot-responding .prompt-form #stop-response-btn{
         gap: 4px; 
     }
 
-
     .prompt-wrapper button {
         width: 45px; 
         height: 45px;
@@ -430,12 +424,12 @@ body.bot-responding .prompt-form #stop-response-btn{
         flex-shrink: 0; 
     }
 
+
     .prompt-wrapper .prompt-form :where(.file-upload-wrapper, button, img) {
         height: 38px;
         width: 38px;
-        flex-shrink: 0;
+        flex-shrink: 0; 
     }
-
     .chats-container .user-message .message-text,
     .chats-container .bot-message .message-text {
         max-width: 90%;
@@ -443,6 +437,6 @@ body.bot-responding .prompt-form #stop-response-btn{
     }
 
     .chats-container .user-message .img-attachment {
-        width: 70%;
+        width: 70%; 
     }
 }
