@@ -400,7 +400,7 @@ body.bot-responding .prompt-form #stop-response-btn{
         border-radius: 25px;
         display: flex;
         align-items: center;
-        max-width: calc(100% - 90px);
+        max-width: calc(100% - 80px);
     }
 
 
