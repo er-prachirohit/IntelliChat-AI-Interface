@@ -348,7 +348,7 @@ body.bot-responding .prompt-form #stop-response-btn{
     color: var(--placeholder-color);
 }
 
-/* Optimized Mobile Responsive Styles */
+
 @media screen and (max-width: 768px) {
     /* Header adjustments */
     .container .app-header {
@@ -361,21 +361,24 @@ body.bot-responding .prompt-form #stop-response-btn{
         font-size: 1.6rem;
     }
 
-    /* Suggestions: Horizontal Scroll fix */
+
     .container .suggestions {
-        display: flex; /* Grid की जगह Flex इस्तेमाल करें ताकि लाइन में रहे */
+        display: flex; 
         overflow-x: auto;
         gap: 12px;
         margin-top: 20px;
         padding-bottom: 15px;
-        scrollbar-width: none; /* Hide scrollbar */
+        padding-right: 20px; 
+        scrollbar-width: none;
         -webkit-overflow-scrolling: touch;
     }
     .container .suggestions::-webkit-scrollbar {
         display: none;
     }
+    
+    
     .suggestions .suggestions-list {
-        width: 220px; /* Card की फिक्स चौड़ाई */
+        width: 240px; 
         flex-shrink: 0;
         min-height: 140px;
         padding: 15px;
@@ -384,56 +387,62 @@ body.bot-responding .prompt-form #stop-response-btn{
         font-size: 0.95rem;
     }
 
-    /* Prompt Container: Layout Fix */
+    
     .prompt-container {
         padding: 10px 0;
     }
     .prompt-wrapper {
         display: flex;
         align-items: center;
-        gap: 6px; /* बटनों के बीच की दूरी */
-        padding: 0 10px;
-        height: auto; /* फिक्स हाइट हटा दी */
+        gap: 6px;
+        padding: 0 15px; 
+        height: auto;
     }
 
     .prompt-wrapper .prompt-form {
-        flex: 1; /* इनपुट बॉक्स ज्यादा जगह लेगा */
+        flex: 1;
         height: 50px;
         border-radius: 25px;
+        padding-right: 8px; 
     }
 
     .prompt-form .prompt-input {
         padding-left: 15px;
+        padding-right: 10px; 
         font-size: 0.95rem;
     }
 
-    /* Action Buttons (Icons) inside form */
+    
     .prompt-form .prompt-action {
-        margin-right: 5px;
-        gap: 2px;
+        margin-right: 8px; 
+        gap: 4px; 
     }
 
-    /* Fix for Round Buttons (Delete/Theme) */
+
     .prompt-wrapper button {
-        width: 45px; /* बटन का साइज थोड़ा छोटा */
+        width: 45px; 
         height: 45px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50% !important; /* हमेशा गोल रखने के लिए */
+        border-radius: 50% !important;
         font-size: 1.2rem;
+        flex-shrink: 0; 
     }
 
-    /* Adjust attachment icons size */
     .prompt-wrapper .prompt-form :where(.file-upload-wrapper, button, img) {
         height: 38px;
         width: 38px;
+        flex-shrink: 0;
     }
 
-    /* Message styling on mobile */
     .chats-container .user-message .message-text,
     .chats-container .bot-message .message-text {
-        max-width: 90%; /* मोबाइल पर मैसेज की चौड़ाई बढ़ा दी */
+        max-width: 90%;
         font-size: 0.95rem;
+    }
+
+    .chats-container .user-message .img-attachment {
+        width: 70%;
     }
 }
