@@ -8,7 +8,7 @@ let fileUploadWrapper = document.querySelector(".file-upload-wrapper");
 let themeToggle = document.querySelector("#theme-toggle-btn");
 
 // API setup
-let API_KEY = config.GEMINI_API_KEY;
+let API_KEY = "REPLACE_ME_WITH_API_KEY";
 let API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
 let typingInterval , controller;
