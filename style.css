@@ -349,47 +349,83 @@ body.bot-responding .prompt-form #stop-response-btn{
 }
 
 
+/* Mobile screens: small phones & tablets */
 @media screen and (max-width: 768px) {
-    .app-header .heading 
-    {
-         font-size: 2.2rem; 
+
+    .app-header .heading {
+        font-size: 2rem;
     }
-    .app-header .sub-heading 
-    {
-         font-size: 1.5rem; 
+    .app-header .sub-heading {
+        font-size: 1.3rem;
     }
 
+    /* Suggestions cards */
     .container .suggestions {
         display: flex;
         overflow-x: auto;
-        gap: 10px;
+        gap: 8px;
         padding-bottom: 10px;
-        margin-top: 40px;
+        margin-top: 35px;
     }
 
     .suggestions .suggestions-list {
-        width: 200px; /* Card size mobile ke liye perfect */
+        width: 160px;
+        padding: 12px;
         flex-shrink: 0;
-        padding: 14px;
     }
-
     .suggestions .suggestions-list .text {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
 
-    /* 3. Bottom Input Bar*/
+    /* Chats container */
+    .chats-container {
+        margin-top: 20px;
+        gap: 15px;
+    }
+    .chats-container .user-message .message-text,
+    .chats-container .bot-message .message-text {
+        font-size: 0.9rem;
+        max-width: 80%;
+    }
+    .chats-container .user-message .img-attachment {
+        width: 70%;
+    }
+
+    /* Prompt container */
     .prompt-wrapper {
-        gap: 8px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 0 8px;
+        flex-wrap: nowrap; /* prevent buttons wrap */
+    }
+
+    .prompt-form {
+        flex: 1; 
+        display: flex;
+    }
+
+    .prompt-input {
+        width: 100%;
+        min-width: 0; 
+        height: 40px;
+        font-size: 0.9rem;
+        padding: 0 12px;
+    }
+
+    /* Delete button */
+    #delete-chats-btn {
+        flex-shrink: 0;
+        height: 40px;
         padding: 0 10px;
+        font-size: 0.9rem;
+        border-radius: 8px;
     }
 
-    .prompt-wrapper .prompt-form {
-        flex: 1 ; /* Buttons ko line mein rakhega */
-    }
-
+    /* Other prompt buttons */
     .prompt-wrapper button {
-        width: 45px;
-        height: 45px;
-        font-size: 1.2rem;
+        height: 40px;
+        width: 40px;
+        font-size: 1rem;
     }
 }
