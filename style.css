@@ -403,14 +403,14 @@ body.bot-responding .prompt-form #stop-response-btn{
 
 
     .prompt-form .prompt-input {
-        padding-left: 12px;
+        padding-left: 10px;
         padding-right: 8px; 
         font-size: 0.95rem;
     }
 
     
     .prompt-form .prompt-action {
-        margin-right: 8px; 
+        margin-right: 6px; 
         gap: 4px; 
     }
 
